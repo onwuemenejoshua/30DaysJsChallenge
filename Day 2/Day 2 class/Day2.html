@@ -314,6 +314,19 @@ console.log('The saying \'Seeing is Believing\' isn\'t correct in 2020')*/
       let love = "Joshua";
       console.log(love.repeat(3)); //JoshuaJoshuaJoshua
 
+      //Let us extract numbers from text using a regular expression. This is not the regular expression section, do not panic! We will cover regular expressions later on.
+
+      let txt =
+        "In 2019, I ran 30 Days of Python. Now, in 2020 I am super exited to start this challenge";
+      let regEx = /\d+/;
+
+      //d with escape character means d not a normal d, act as a digit
+      // + means one or more digit numbers
+      // if there is g after it means global, search everywhere.
+
+      console.log(txt.match(regEx)); // ["2", "0", "1", "9", "3", "0", "2", "0", "2", "0"]
+      console.log(txt.match(/\d+/g)); // ["2019", "30", "2020"]
+
       //Casting: Converting one data type to another data type. We use parseInt(), parseFloat(), Number(), + sign, str() When we do arithmetic operations string numbers should be first converted to integer or float if not it returns an error.
 
       /*

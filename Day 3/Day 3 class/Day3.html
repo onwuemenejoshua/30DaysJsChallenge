@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Onwuemene Joshua" />
+    <title>Day 3 class</title>
+  </head>
+  <body>
+    <script>
+      /*
+        BOOLEANS
+        A boolean data type represents one of the two values:true or false. Boolean value is either true or false.
+
+        Truthy values
+            All numbers(positive and negative) are truthy except zero
+            All strings are truthy except an empty string ('')
+            The boolean true
+
+        Falsy values
+            0
+            null
+            undefined
+            NaN
+            the boolean false
+            '', "", ``, empty string
+        */
+      let mystery = "";
+      if (mystery) {
+        console.log("TRUTHY");
+      } else {
+        console.log("FALSY");
+      }
+
+      //the above code is just a way of checking if something is truthy or falsy, is just a way of checking if there is content, if it exist, if is not null.
+
+      // Concatenating string with numbers using string interpolation
+      /*
+ The boiling point of water is 100 oC.
+ Human body temperature is 37 oC.
+ The gravity of earth is 9.81 m/s2.
+ */
+      let boilingPoint = 100;
+      let bodyTemp = 37;
+      let gravity = 9.81;
+      console.log(
+        `The boiling point of water is ${boilingPoint} oC.\nHuman body temperature is ${bodyTemp} oC.\nThe gravity of earth is ${gravity} m / s2.`
+      );
+
+      //The following symbols are the common logical operators: &&(ampersand) , ||(pipe) and !(negation). The && operator gets true only if the two operands are true. The || operator gets true either of the operand is true. The ! operator negates true to false and false to true.
+
+      //In JavaScript we use the increment operator to increase a value stored in a variable. The increment could be pre or post increment. Let us see each of them:
+
+      //pre-increment
+      let count = 0;
+      console.log(++count); // 1
+      console.log(count); // 1
+
+      //post-increment. OFTEN TIME WE USE THE POST-INCREMENT IN JS
+      let counts = 0;
+      console.log(counts++); // 0
+      console.log(counts); // 1
+
+      //In JavaScript we use the decrement operator to decrease a value stored in a variable. The decrement could be pre or post decrement. Let us see each of them:
+      /*
+      pre-decrement
+      let count = 0
+console.log(--count) // -1
+console.log(count)  // -1
+
+post-decrement; OFTEN TIMES WE USE THE POST-DECREMENT IN JS
+let count = 0
+console.log(count--) // 0
+console.log(count)   // -1
+
+//Ternary operator allows to write a condition. Another way to write conditionals is using ternary operators. Look at the following examples:
+
+condition? expIfTrue: expIfFalse
+      */
+      let number = 5;
+      number > 3
+        ? console.log(`${number} is greater than 3`)
+        : console.log(`increase the value of ${number}`);
+      let isRaining = true;
+      isRaining
+        ? console.log("You need a rain coat.")
+        : console.log("No need for a rain coat.");
+      //the code will be you need a rain coat, because isRaining is TRUTHY
+
+      /*
+      WINDOWS METHOD
+
+     WINDOW ALERT() METHOD
+      alert() method displays an alert box with a specified message and an OK button. It is a builtin method and it takes on argument.
+       alert("welcome to 30DaysOfJavascript challenge");
+
+       WINDW PROMPT() METHOD
+       The window prompt methods display a prompt box with an input on your browser to take input values and the input data can be stored in a variable. The prompt() method takes two arguments. The second argument is optional.
+
+         const name = prompt("what is your name?");
+      console.log(name); //this will be print in the developers console section
+
+    WINDOW CONFIRM() METHOD
+    The confirm() method displays a dialog box with a specified message, along with an OK and a Cancel button. A confirm box is often used to ask permission from a user to execute something. Window confirm() takes a string as an argument. Clicking the OK yields true value, whereas clicking the Cancel button yields false value.
+
+    const agree = confirm("Are you sure you like to delete? ");
+      console.log(agree); // result will be true or false based on what you click on the dialog box
+
+
+DATE OBJECT
+Time is an important thing. We like to know the time of a certain activity or event. In JavaScript current time and date is created using "JavaScript Date Object". The object we create using Date object provides many methods to work with date and time.The methods we use to get date and time information from a date object values are started with a word "get" because it provide the information. getFullYear(), getMonth(), getDate(), getDay(), getHours(), getMinutes, getSeconds(), getMilliseconds(), getTime(), getDay()
+
+      */
+
+      //Creating a time object; Once we create time object. The time object will provide information about time.
+
+      const now = new Date();
+      console.log(now); //Wed Oct 26 2022 14:03:58 GMT+0100 (West Africa Standard Time)
+
+      //since we have a created a time object from the one above we can now access any date time from the object using "get" method
+
+      //getting a full year. i.e geting the "year" that we are.
+      console.log(now.getFullYear()); //2022
+
+      //extract the "month" from a time object
+      console.log(now.getMonth()); //9 because the month is October (0-11)
+
+      //extracting the "day" of the month from a time object
+      console.log(now.getDate()); //26 the day of the month is 24 (1-31)
+
+      //getting the "day" of the week
+      console.log(now.getDay()); //3 because //  Sunday is 0, Monday is 1 and Wednesday is 3. Getting the weekday as a number (0-6)
+
+      //getting  "hours" from a time object
+      console.log(now.getHours()); //14 because the time is 14:03:58
+
+      //getting "minutes" from a time object
+      console.log(now.getMinutes()); //20 because the time is 14:20:42
+
+      //extracting the "seconds" from a time object
+      console.log(now.getSeconds()); // 46 because the time is 14:22:46
+
+      //extracting "time" from a time object; This method give time in milliseconds starting from January 1, 1970. It is also know as Unix time.
+
+      console.log(now.getTime()); //1666790757367. the number of secocnds from 1970 to this present time of typing this
+
+      console.log(Date.now()); //this also get the time in seconds. is it another method of getting the time.
+
+      const year = now.getFullYear(); // return year
+      const month = now.getMonth() + 1; // return month(0 - 11)
+      const date = now.getDate(); // return date (1 - 31)
+      const hours = now.getHours(); // return number (0 - 23)
+      const minutes = now.getMinutes(); // return number (0 -59)
+
+      console.log(`${date}/${month}/${year} ${hours}:${minutes}`); // 26/10/2022 14:34
+    </script>
+  </body>
+</html>

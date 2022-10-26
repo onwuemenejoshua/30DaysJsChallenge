@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Onwuemene Joshua" />
+    <title>Day3 exercise</title>
+  </head>
+  <body>
+    <script>
+      //Write three JavaScript statement which provide truthy value.
+      let element = "joshua";
+      if (element) {
+        console.log("TRUTHY");
+      } else {
+        console.log("FALSY");
+      }
+
+      //Write three JavaScript statement which provide falsy value.
+      let mystery = "";
+      if (mystery) {
+        console.log("TRUTHY");
+      } else {
+        console.log("FALSY");
+      }
+
+      //Find the length of python and jargon and make a falsy comparison statement.
+      let python = "python";
+      let jargon = "jargon";
+      const testing = python.length !== jargon.length;
+      console.log(testing);
+
+      //Check if 'on' is found in both python and jargon
+      const language = "python";
+      const nonsense = "jargon";
+      if (language.includes("on") && nonsense.includes("on")) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+
+      //Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+      //   let base = prompt("enter base of triangle");
+      //   let height = prompt("enter height of triangle");
+      //   let calculate = 0.5 * base * height;
+      //   alert(`The area of the triangle is ${calculate} `);
+
+      // Write a script that prompt the user to enter side a, side b, and side c of the triangle and calculate the perimeter of triangle (perimeter = a + b + c)
+      // parseFloat, was use so it can collect numbers for both integer and float(decimal). and also to let it know that is a number
+      //   let sideA = parseFloat(prompt("enter side a:"));
+      //   let sideB = parseFloat(prompt("enter side b:"));
+      //   let sideC = parseFloat(prompt("enter side c:"));
+      //   let perimeter = sideA + sideB + sideC;
+      //   alert(`The perimeter of the side is ${perimeter} `);
+
+      //Get length and width using prompt and calculate an area of rectangle (area = length x width and the perimeter of rectangle (perimeter = 2 x (length + width))
+      //   let a = parseFloat(prompt("enter side"));
+      //   let b = parseFloat(prompt("enter side"));
+      //   let area = a * b;
+      //   alert(`the area is ${area}`);
+      //   let peri = 2 * (a + b);
+      //   alert(`the perimeter is ${peri}`);
+
+      //Get radius using prompt and calculate the area of a circle (area = pi x r x r) and circumference of a circle(c = 2 x pi x r) where pi = 3.14.
+      //   const pi = Math.PI;
+      //   const r = parseFloat(prompt("enter area"));
+      //   let areaOfCircle = pi * r * r;
+      //   alert(`the area of circle is ${areaOfCircle}`);
+
+      // Calculate the slope, x-intercept and y-intercept of y = 2x -2
+      //Slope is m = (y2-y1)/(x2-x1). Find the slope between point (2, 2) and point(6,10)
+
+      //where is x1 = 2, y1 = 2, x2 = 6, y2 = 10
+
+      //   let x1 = parseFloat(prompt("enter x1"));
+      //   let y1 = parseFloat(prompt("enter y1"));
+      //   let x2 = parseFloat(prompt("enter x2"));
+      //   let y2 = parseFloat(prompt("enter y2"));
+      //   let m = (y2 - y1) / (x2 - x1);
+      //   alert(`the slope is ${m}`);
+
+      //Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
+      let x3 = parseFloat(prompt("enter x3"));
+      let x4 = parseFloat(prompt("enter x4"));
+      let value = x3 ** 2 + 6(x4) + 9;
+      alert(`the value of y is ${value}`);
+    </script>
+  </body>
+</html>
