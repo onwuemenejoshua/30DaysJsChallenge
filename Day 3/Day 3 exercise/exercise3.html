@@ -94,18 +94,25 @@
 
       //Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
       //getYear() has been replace by getFullYear because getYear return 100 greater than the current year. e.g as we are in 2022 get year will return 122 instead of 22
-      //   let now = new Date();
-      //   //   console.log(now.getYear());
-      //   let user = parseFloat(prompt("enter birth year"));
-      //   let date = now.getFullYear() - user;
-      //   user >= 18
-      //     ? alert(`you are ${date} You are old enough to drive`)
-      //     : alert(
-      //         `you are ${date} You will be allowed to drive after ${date - user}` //work on this session
-      //       );
+      // let now = new Date();
+      // //   console.log(now.getYear());
+      // let user = parseFloat(prompt("enter birth year"));
+      // let date = now.getFullYear() - user;
+      // user >= 18
+      //   ? alert(`you are ${date} You are old enough to drive`)
+      //   : alert(
+      //       `you are ${date} You will be allowed to drive after ${date - user}` //work on this session
+      //     );
 
       //Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
       //answer this question later
+
+      let amountOfYears = parseInt(prompt("Enter birth year"));
+      let years = new Date();
+      let myAge = years.getFullYear() - amountOfYears;
+      // let amountOfSeconds = myAge.getTime();
+
+      alert(`you lived for ${myAge} seconds`);
 
       /*Create a human readable time format using the Date time object
 
