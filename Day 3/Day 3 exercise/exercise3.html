@@ -96,23 +96,24 @@
       //getYear() has been replace by getFullYear because getYear return 100 greater than the current year. e.g as we are in 2022 get year will return 122 instead of 22
       // let now = new Date();
       // //   console.log(now.getYear());
-      // let user = parseFloat(prompt("enter birth year"));
+      // let user = prompt("enter birth year");
       // let date = now.getFullYear() - user;
-      // user >= 18
+      // let remainder = 18 - date;
+      // date >= 18
       //   ? alert(`you are ${date} You are old enough to drive`)
       //   : alert(
-      //       `you are ${date} You will be allowed to drive after ${date - user}` //work on this session
+      //       `you are ${date} You will be allowed to drive after ${remainder}` //work on this session
       //     );
 
       //Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
       //answer this question later
 
-      let amountOfYears = parseInt(prompt("Enter birth year"));
-      let years = new Date();
-      let myAge = years.getFullYear() - amountOfYears;
-      // let amountOfSeconds = myAge.getTime();
+      // let amountOfYears = parseInt(prompt("Enter birth year"));
+      // let years = new Date();
+      // let myAge = years.getFullYear() - amountOfYears;
+      // // let amountOfSeconds = myAge.getTime();
 
-      alert(`you lived for ${myAge} seconds`);
+      // alert(`you lived for ${myAge} seconds`);
 
       /*Create a human readable time format using the Date time object
 
@@ -130,6 +131,20 @@ DD/MM/YYYY HH:mm*/
       console.log(`${year}-${month}-${day} ${hours}:${minutes}`);
       console.log(`${day}-${month}-${year} ${hours}:${minutes}`);
       console.log(`${year}-${month}-${day} ${hours}:${minutes}`);
+
+      const data4 = new Date();
+
+      //to convert time format to 24 hours in javascript to 12 hours format you use toLcaleString
+
+      console.log(
+        data4.toLocaleString(["en-US"], {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+        })
+      );
     </script>
   </body>
 </html>
