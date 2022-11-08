@@ -7,5 +7,97 @@
     <meta name="author" content="Onwuemene Joshua" />
     <title>Day 5 class</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      //ARRAY
+
+      const numbers = [0, 3.14, 9.81, 37, 98.6, 100]; // array of numbers
+      const fruits = ["banana", "orange", "mango", "lemon"]; // array of strings, fruits
+      const vegetables = ["Tomato", "Potato", "Cabbage", "Onion", "Carrot"]; // array of strings, vegetables
+      const animalProducts = ["milk", "meat", "butter", "yoghurt"]; // array of strings, products
+      const webTechs = [
+        "HTML",
+        "CSS",
+        "JS",
+        "React",
+        "Redux",
+        "Node",
+        "MongDB",
+      ]; // array of web technologies
+      const countries = ["Finland", "Denmark", "Sweden", "Norway", "Iceland"]; // array of strings, countries
+
+      console.log(numbers.length);
+
+      const arr = [
+        "Joshua",
+        250,
+        true,
+        { country: "Country", city: "Benin city" },
+        { skills: ["HTML", "CSS", "JS", "SCSS"] },
+      ]; // arr containing different data types
+      console.log(arr);
+
+      //WE CAN CREATE AN ARRAY USING SPLIT()
+
+      let js = "JavaScript";
+      const charsInJavaScript = js.split(""); //it create an array of  every letter.
+      console.log(charsInJavaScript);
+
+      let companiesString =
+        "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
+      const companies = companiesString.split(","); // it create an array of the comma(,) i.e at every company in this case
+      console.log(companies); //['Facebook', ' Google', ' Microsoft', ' Apple', ' IBM', ' Oracle', ' Amazon']
+
+      let txt =
+        "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+      const words = txt.split(" "); //in a string, it create an array of each words. it is used as a separator between words.
+      console.log(words);
+
+      let text = "how are you doing, hope you are good?";
+      const textA = text.split(" ");
+      console.log(textA);
+
+      //MANIPULATING ARRAY
+      //FILL
+
+      const numberss = [1, 2, 3, 4, 5];
+      numberss[0] = 10; // changing 1 at index 0 to 10
+      numberss[1] = 20; // changing  2 at index 1 to 20
+
+      console.log(numberss); // [10, 20, 3, 4, 5]
+
+      const array = Array(8);
+      console.log(array); //it create  8 empty value.
+
+      let valueEight = Array(5).fill(2);
+      console.log(valueEight);
+
+      //CONCATENATING ARRAY
+      const firstList = [1, 2, 3];
+      const secondList = [4, 5, 6];
+      const thirdList = firstList.concat(secondList);
+
+      console.log(thirdList); // [1, 2, 3, 4, 5, 6]
+
+      //to check the index of an array, if it does not exist, it returns -1
+
+      const number = [1, 2, 3, 4, 5];
+
+      console.log(number.indexOf(5)); // -> 4
+      console.log(number.indexOf(0)); // -> -1
+      console.log(number.indexOf(1)); // -> 0
+      console.log(number.indexOf(6)); // -> -1
+
+      // let us check if a banana exist in the array
+
+      const fruit = ["banana", "orange", "mango", "lemon"];
+      let index = fruit.indexOf("banana"); // 0
+
+      if (index === -1) {
+        console.log("This fruit does not exist in the array");
+      } else {
+        console.log("This fruit does exist in the array");
+      } //the fruit exist in the array. because it can be found and -1 means that it cannot be found.
+    </script>
+  </body>
 </html>
