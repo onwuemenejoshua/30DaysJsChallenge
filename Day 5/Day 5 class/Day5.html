@@ -98,6 +98,68 @@
       } else {
         console.log("This fruit does exist in the array");
       } //the fruit exist in the array. because it can be found and -1 means that it cannot be found.
+
+      //INCLUDES: to check if an items exist in array. if it exists it returns true else it returns false.
+      const webTech = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "MongoDB",
+      ]; // List of web technologies
+
+      console.log(webTechs.includes("Node")); // true
+      console.log(webTechs.includes("C")); // false
+
+      //Array.isArray: to check if the data types is an array
+      const numb = [1, 2, 3, 4];
+      console.log(Array.isArray(numb)); //true
+
+      const numbs = 100;
+      console.log(Array.isArray(numbs));
+
+      const nums = [1, 2, 3, 4];
+      console.log(nums.toString());
+
+      const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+      console.log(names.toString()); // Asabeneh,Mathias,Elias,Brook
+
+      //join: It is used to join the elements of the array, the argument we passed in the join method will be joined in the array and return as a string. By default, it joins with a comma, but we can pass different string parameter which can be joined between the items.
+
+      const nu = [1, 2, 3, 4, 5];
+      console.log(nu.join()); // 1,2,3,4,5
+
+      const name = ["Asabeneh", "Mathias", "Elias", "Brook"];
+
+      console.log(name.join()); // Asabeneh,Mathias,Elias,Brook
+      console.log(name.join("")); //AsabenehMathiasEliasBrook
+      console.log(name.join(" ")); //Asabeneh Mathias Elias Brook
+      console.log(name.join(", ")); //Asabeneh, Mathias, Elias, Brook
+      console.log(name.join(" # ")); //Asabeneh # Mathias # Elias # Brook
+
+      // slice: To cut out a multiple items in range. It takes two parameters:starting and ending position. It doesn't include the ending position. JUST LIKE SUBSTRING IN STRINGS.
+
+      console.log(numbers.slice()); // -> it copies all  item
+      console.log(numbers.slice(0)); // -> it copies all  item
+      console.log(numbers.slice(0, numbers.length)); // it copies all  item
+      console.log(numbers.slice(1, 4)); // -> [2,3,4] // it doesn't include the ending position
+
+      //splice:  It takes three parameters:Starting position, number of times to be removed and number of items to be added.
+
+      numbers.splice();
+      console.log(numbers); // -> remove all items
+
+      numbers.splice(0, 1);
+      console.log(numbers); // remove the first item
+
+      numbers.splice(3, 3, 7, 8, 9);
+      console.log(numbers.splice(3, 3, 7, 8, 9)); // -> [1, 2, 3, 7, 8, 9] //it removes three item and replace three items
+
+      //reverse: reversing the order of an array.
+      numbers.reverse(); // -> reverse array order
+      console.log(numbers); // [5, 4, 3, 2, 1]
     </script>
   </body>
 </html>
