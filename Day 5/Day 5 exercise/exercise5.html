@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Onwuemene Joshua" />
+    <title>Day 5 exercise</title>
+  </head>
+  <body>
+    <script>
+      //In the webTechs array check if Sass exists in the array and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+      const webTech = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "MongoDB",
+      ]; // List of web technologies
+
+      webTech.includes("Sass") ? console.log(webTech) : webTech.push("Sass");
+      console.log(webTech);
+
+      //The following is an array of 10 students ages:
+      const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+      const sorted = ages.sort();
+      console.log(sorted);
+
+      //Sort the array and find the min and max age
+      //   console.log(Math.min(sorted));
+      //   console.log(Math.max(sorted));
+
+      const nowString = sorted.toString();
+      console.log(nowString);
+      console.log(Math.min(19, 19, 20, 22, 24, 24, 24, 25, 25, 26));
+      console.log(Math.max(19, 19, 20, 22, 24, 24, 24, 25, 25, 26));
+    </script>
+  </body>
+</html>
