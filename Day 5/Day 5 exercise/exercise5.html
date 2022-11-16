@@ -282,10 +282,10 @@
 
       //Divide the countries array into two equal arrays if it is even. If countries array is not even , one more country for the first half.
 
-      const middleIndex = Math.ceil(countries.length / 2); //get the middleindex
+      const middleIndex = Math.ceil(countries.length / 2); //get the middleindex of the array
 
-      const firstHalf = countries.splice(0, middleIndex);
-      const secondHalf = countries.splice(-middleIndex); //splice from after the middle index to the last index.
+      const firstHalf = countries.splice(0, middleIndex); //remove from index 0 to the middle index
+      const secondHalf = countries.splice(-middleIndex); //remove all the element from after the middle index. i.e from after the middle index to the last index, remove them.
 
       console.log(firstHalf);
       console.log(secondHalf);
