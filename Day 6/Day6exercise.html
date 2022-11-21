@@ -9,6 +9,54 @@
   </head>
   <body>
     <script>
+      const countries = [
+        "Albania",
+        "Bolivia",
+        "Canada",
+        "Denmark",
+        "Ethiopia",
+        "Finland",
+        "Germany",
+        "Hungary",
+        "Ireland",
+        "Japan",
+        "Kenya",
+      ];
+
+      const webTechs = [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "MongoDB",
+      ];
+
+      const mernStack = ["MongoDB", "Express", "React", "Node"];
+
+      //Iterate 0 to 10 using for loop, do the same using while and do while loop
+      for (let i = 0; i < countries.length; i++) {
+        console.log(i, countries[i]);
+      }
+
+      // let j = 0;
+      // while (j < countries.length) {
+      //   console.log(j, countries[j]);
+      //   j++;
+      // }
+
+      //Iterate 10 to 0 using for loop, do the same using while and do while loop
+
+      //here we are starting at the last index and saying if the last index is greater than or equal to 0, then minus 1 from it.
+      for (let i = countries.length; i >= 0; i--) {
+        console.log(i, countries[i]);
+      }
+
+      // let n = 10;
+      // for (let i = 0; i <= n; i++) {
+      //   console.log(i);
+      // }
       /*Write a loop that makes the following pattern using console.log():
 
     #
@@ -21,7 +69,14 @@
 
 */
 
-      // for (i = 0; i <= 10; i++) {}
+      var m, n;
+      for (m = 1; m <= 7; m++) {
+        //start from index 1 and end at 7
+        for (n = 1; n <= m; n++) {
+          document.write("#");
+        }
+        document.write("<br />");
+      }
     </script>
   </body>
 </html>
