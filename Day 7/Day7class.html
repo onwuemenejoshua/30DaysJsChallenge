@@ -40,6 +40,84 @@
         return `${firstName} ${lastName}`;
       }
       console.log(printFullName("Asabeneh", "Yetayeh"));
+
+      //function with many parameters
+      function sumArray(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum = sum + arr[i];
+        }
+        return sum;
+      }
+
+      //function expression
+      const squares = function (n) {
+        return n * n;
+      };
+
+      //self-invoking function; are anonymous function which do not need to be called to return a value.
+
+      (function (n) {
+        console.log(n * n);
+      })(2); // 4, but instead of just printing if we want to return and store the data, we do as shown below
+
+      let squaredNum = (function (n) {
+        return n * n;
+      })(10);
+
+      console.log(squaredNum);
+
+      (function (a, b) {
+        console.log(a + b);
+      })(3, 2);
+
+      //Arrow functions
+      const sum = (a, b) => {
+        return a + b;
+      };
+
+      //if the arrow function is one line without the return value. It is called implicit return
+      const times = (n) => n * n;
+      console.log(times(5));
+
+      const newArr = (arr) => {
+        const bigLetter = [];
+        for (const countries of arr) {
+          bigLetter.push(countries.toUpperCase());
+        }
+        return bigLetter;
+      };
+
+      //functions with default parameter. thought, the default parameter can change when we call the function
+      function greetings(name = "Peter") {
+        let message = `${name}, welcome to 30 Days Of JavaScript!`;
+        return message;
+      }
+
+      //greetings("john"): calling the function and changing the default parameter.
+      console.log(greetings());
+      console.log(greetings("Asabeneh"));
+
+      function calculateAge(birthYear, currentYear = 2022) {
+        let age = currentYear - birthYear;
+        return age;
+      }
+      //how you call the function calculateAge(1998)
+      console.log("Age: ", calculateAge(1998));
+
+      function weightOfObject(mass, gravity = 9.81) {
+        let weight = mass * gravity + " N"; // the value has to be changed to string first
+        return weight;
+      }
+
+      console.log("Weight of an object in Newton: ", weightOfObject(100)); // 9.81 gravity at the surface of Earth
+      console.log("Weight of an object in Newton: ", weightOfObject(100, 1.62)); // gravity at surface of Moon
+
+      //It is same way to also do it arrow function
+
+      // const calculateAge = (birthYear, currentYear = 2019) =>
+      //   currentYear - birthYear;
+      // console.log("Age: ", calculateAge(1998));
     </script>
   </body>
 </html>

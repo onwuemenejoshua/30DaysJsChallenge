@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 9 class</title>
+  </head>
+  <body>
+    <script>
+      //RETURNING A FUNCTION
+      // Higher order function returning an other function
+      const higherOrder = (n) => {
+        const doSomething = (m) => {
+          const doWhatEver = (t) => {
+            return 2 * n + 3 * m + t;
+          };
+          return doWhatEver;
+        };
+        return doSomething;
+      };
+      console.log(higherOrder(2)(3)(10));
+    </script>
+  </body>
+</html>
