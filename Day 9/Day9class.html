@@ -20,6 +20,123 @@
         return doSomething;
       };
       console.log(higherOrder(2)(3)(10));
+
+      //   const numbers = [1, 2, 3, 4, 5];
+      //   const sumArray = (arr) => {
+      //     let sum = 0;
+      //     const callback = function (element) {
+      //       sum += element;
+      //     };
+      //     arr.forEach(callback);
+      //     return sum;
+      //   };
+      //   console.log(sumArray(numbers));
+
+      const number = [1, 2, 3, 4, 5];
+
+      const sumArray = (arr) => {
+        let sum = 0;
+        number.forEach((x) => {
+          sum += x;
+        });
+        return sum;
+      };
+      console.log(sumArray(number));
+
+      /*Setting Interval using a setInterval function
+In JavaScript, we use setInterval higher order function to do some activity continuously with in some interval of time. The setInterval global method take a callback function and a duration as a parameter. The duration is in milliseconds and the callback will be always called in that interval of time.
+
+// syntax
+function callback() {
+  // code goes here
+}
+setInterval(callback, duration)
+
+*/
+
+      function sayHello() {
+        console.log("Hello");
+      }
+      setInterval(sayHello, 1000); // it prints hello in every second, 1000ms is 1s
+
+      /*Setting a time using a setTimeout
+In JavaScript, we use setTimeout higher order function to execute some action at some time in the future. The setTimeout global method take a callback function and a duration as a parameter. The duration is in 
+milliseconds and the callback wait for that amount of time.
+
+// syntax
+function callback() {
+  // code goes here
+}
+setTimeout(callback, duration) // duration in milliseconds
+
+*/
+
+      function sayHi() {
+        console.log("HI..............");
+      }
+      setTimeout(sayHi, 5000); // it prints hello after it waits for 2 seconds.
+
+      //forEach. accept a callback and call the function once per element in the array.
+      let sum = 0;
+      const numbers = [1, 2, 3, 4, 5, 6];
+      numbers.forEach((num) => {
+        return (sum += num);
+      });
+      console.log(sum);
+
+      const countries = ["Finland", "Denmark", "Sweden", "Norway", "Iceland"];
+      countries.forEach((element, idx) =>
+        console.log(idx, element.toUpperCase())
+      );
+
+      //MAP: iterate an array element and modify the array element  it takes a call back function with element, index, array parameter and return a new array
+      /*Arrow function and explicit return
+const modifiedArray = arr.map((element,index) => element);
+*/
+      //Example
+      const numbersSquare = numbers.map((num) => num * num);
+      console.log(numbersSquare);
+      const isEven = numbers.map((num) => {
+        return num % 2 === 0; //this is a boolean which evaluate to either true or false.
+      });
+      console.log(isEven);
+
+      //FILTER: filter out items which pass certian conditions implemented by the provided function
+
+      //Filter countries containing land
+      const countriesContainingLand = countries.filter((country) =>
+        country.includes("land")
+      );
+      console.log(countriesContainingLand);
+
+      const scores = [
+        { name: "Asabeneh", score: 95 },
+        { name: "Lidiya", score: 98 },
+        { name: "Mathias", score: 80 },
+        { name: "Elias", score: 50 },
+        { name: "Martha", score: 85 },
+        { name: "John", score: 100 },
+      ];
+
+      const scoresGreaterEighty = scores.filter((score) => score.score > 80);
+      console.log(scoresGreaterEighty);
+
+      const summ = number.reduce((total, currval) => total + currval);
+      console.log(summ);
+
+      //Every: test whether all the element in the array pass the provided function in the text.
+      const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+      const areAllStr = names.every((name) => typeof name === "string"); // Are all strings?
+
+      console.log(areAllStr);
+
+      //   const isInteger = numbers.every((n) => typeof n === integer);
+      //   console.log(isInteger);
+
+      const ages = [24, 22, 25, 32, 35, 18];
+      const age = ages.find((age) => age < 20);
+
+      console.log(age);
     </script>
   </body>
 </html>
