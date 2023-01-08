@@ -44,15 +44,15 @@
       console.log(sumArray(number));
 
       /*Setting Interval using a setInterval function
-In JavaScript, we use setInterval higher order function to do some activity continuously with in some interval of time. The setInterval global method take a callback function and a duration as a parameter. The duration is in milliseconds and the callback will be always called in that interval of time.
+      In JavaScript, we use setInterval higher order function to do some activity continuously with in some interval of time. The setInterval global method take a callback function and a duration as a parameter. The duration is in milliseconds and the callback will be always called in that interval of time.
 
-// syntax
-function callback() {
-  // code goes here
-}
-setInterval(callback, duration)
+      // syntax
+      function callback() {
+        // code goes here
+      }
+      setInterval(callback, duration)
 
-*/
+      */
 
       function sayHello() {
         console.log("Hello");
@@ -60,16 +60,16 @@ setInterval(callback, duration)
       setInterval(sayHello, 1000); // it prints hello in every second, 1000ms is 1s
 
       /*Setting a time using a setTimeout
-In JavaScript, we use setTimeout higher order function to execute some action at some time in the future. The setTimeout global method take a callback function and a duration as a parameter. The duration is in 
-milliseconds and the callback wait for that amount of time.
+      In JavaScript, we use setTimeout higher order function to execute some action at some time in the future. The setTimeout global method take a callback function and a duration as a parameter. The duration is in
+      milliseconds and the callback wait for that amount of time.
 
-// syntax
-function callback() {
-  // code goes here
-}
-setTimeout(callback, duration) // duration in milliseconds
+      // syntax
+      function callback() {
+        // code goes here
+      }
+      setTimeout(callback, duration) // duration in milliseconds
 
-*/
+      */
 
       function sayHi() {
         console.log("HI..............");
@@ -91,8 +91,8 @@ setTimeout(callback, duration) // duration in milliseconds
 
       //MAP: iterate an array element and modify the array element  it takes a call back function with element, index, array parameter and return a new array
       /*Arrow function and explicit return
-const modifiedArray = arr.map((element,index) => element);
-*/
+      const modifiedArray = arr.map((element,index) => element);
+      */
       //Example
       const numbersSquare = numbers.map((num) => num * num);
       console.log(numbersSquare);
@@ -124,19 +124,52 @@ const modifiedArray = arr.map((element,index) => element);
       const summ = number.reduce((total, currval) => total + currval);
       console.log(summ);
 
+      const score = scores.find((n) => n.score > 80);
+      console.log(score);
       //Every: test whether all the element in the array pass the provided function in the text.
       const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
       const areAllStr = names.every((name) => typeof name === "string"); // Are all strings?
 
       console.log(areAllStr);
 
-      //   const isInteger = numbers.every((n) => typeof n === integer);
-      //   console.log(isInteger);
+      const isInteger = numbers.every((n) => typeof n === "number");
+      console.log(isInteger);
 
       const ages = [24, 22, 25, 32, 35, 18];
       const age = ages.find((age) => age < 20);
 
       console.log(age);
+
+      const namess = ["Asabeneh", "Mathias", "Elias", "Brook"];
+      const result = namess.find((name) => name.length > 7);
+      console.log(result);
+
+      //findIndex; return the position of the first index which satisfies the condition
+      const resultName = namess.findIndex((name) => name.length > 7);
+      console.log(resultName);
+
+      //SOME: check if any of the element are similar in one aspect i.e if any of the element pass the test function.
+      const nameT = namess.some((n) => n.includes("t")); //used to check if any of the name include t
+      console.log(nameT);
+
+      //SORT: when sorting, is good to copy first, because sort changes the array
+      const prices = [12, 200, 35.5, 90, 9000, 12000, 30000];
+      const ascSort = prices.slice().sort((a, b) => a - b); //ascending sorting
+      console.log(ascSort);
+      const desSort = prices.slice().sort((a, b) => b - a); //descending sorting
+      console.log(desSort);
+
+      /*Sorting Object Arrays
+Whenever we sort objects in an array, we use the object key to compare. Let us see the example below.*/
+      const users = [
+        { name: "Asabeneh", age: 150 },
+        { name: "Brook", age: 50 },
+        { name: "Eyob", age: 100 },
+        { name: "Elias", age: 22 },
+      ];
+
+      const snr = users.slice().sort((a, b) => a.age - b.age);
+      console.log(snr);
     </script>
   </body>
 </html>
