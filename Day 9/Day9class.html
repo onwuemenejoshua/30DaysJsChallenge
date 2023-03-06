@@ -57,7 +57,7 @@
       function sayHello() {
         console.log("Hello");
       }
-      setInterval(sayHello, 1000); // it prints hello in every second, 1000ms is 1s
+      setInterval(sayHello, 3000); // it prints hello in every second, 1000ms is 1s
 
       /*Setting a time using a setTimeout
       In JavaScript, we use setTimeout higher order function to execute some action at some time in the future. The setTimeout global method take a callback function and a duration as a parameter. The duration is in
@@ -76,7 +76,7 @@
       }
       setTimeout(sayHi, 5000); // it prints hello after it waits for 2 seconds.
 
-      //forEach. accept a callback and call the function once per element in the array.
+      //forEach. accept a callback and call the function once per element in the array.It takes an element, index parameters and array itself.
       let sum = 0;
       const numbers = [1, 2, 3, 4, 5, 6];
       numbers.forEach((num) => {
@@ -93,6 +93,7 @@
       /*Arrow function and explicit return
       const modifiedArray = arr.map((element,index) => element);
       */
+
       //Example
       const numbersSquare = numbers.map((num) => num * num);
       console.log(numbersSquare);
@@ -118,11 +119,20 @@
         { name: "John", score: 100 },
       ];
 
-      const scoresGreaterEighty = scores.filter((score) => score.score > 80);
+      const scoresGreaterEighty = scores.filter((f) => f.score > 80);
       console.log(scoresGreaterEighty);
 
-      const summ = number.reduce((total, currval) => total + currval);
-      console.log(summ);
+      /*REDUCE
+      reduce: Reduce takes a callback function. The call back function takes accumulator, current, and optional initial value as a parameter and returns a single value. It is a good practice to define an initial value for the accumulator value. If we do not specify this parameter, by default accumulator will get array first value. If our array is an empty array, then Javascript will throw an error.
+      */
+
+      // const summ = number.reduce((total, currval) => total + currval);
+      // console.log(summ);
+
+      const addition = numbers.reduce((total, currVal) => {
+        return total + currVal;
+      });
+      console.log(addition);
 
       const score = scores.find((n) => n.score > 80);
       console.log(score);
